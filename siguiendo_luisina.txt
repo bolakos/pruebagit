@@ -1,0 +1,46 @@
+GIT
+--- Siguiendo a luisina de Paula - Todocode
+1. Crea una carpeta en tu disco local "pruebaGit" (Se creo en D:/pruebaGit)
+2. Inicia git "git init"
+3. Entre a github
+4. Crea un repositorio remoto - publico - con el nombre de "pruebagit" (revisa las credenciales)
+- Ten presente la dirección web en la barra donde está HTTPS/SSH: https://github.com/bolakos/pruebagit.git
+
+--- Asociar y conectar los repositorios local y remoto --- Primero asociemos los repositorios
+5. Trabaja en local. En la terminal de GitHub local, situate en la carpeta "pruebaGit" (usa cd.. si es necesario)
+6. Revisa que esté inicializado el repositorio
+7. Teclea: git config user.name "bolakos" (bolakos es el nombre de usuario de mi github remoto)
+8. Teclea: git config user.email "bolakos@gmail.com" (Es el email de github)
+
+--- Una vez asociados los repositorios, procedemos a comunicarlos o conectarlos
+9. Teclea: git remote add origin "https://github.com/bolakos/pruebagit.git" (la url del repositorio remoto")
+
+--- git push (Pasa un archivo del repositorio local al remoto)
+10. Crea un archivo dentro de la carpeta "local" pruebaGit (por ejemplo crea el archivo de texto "hola"... escribe algo dentro del documento)
+
+--- git status (Nos permite ver el estado en que esta git ahora)
+11. Teclea: git status (Lee cuidadosamente lo que sale... ¿vez el archivo rojo?)
+--- add (agrega el archivo al stage area, está agregado en forma provisoria, aún se puede volver atrás)
+12. Teclea: git add hola.txt (SIN LAS COMILLAS - El nombre del archivo que quieres pasar al remoto)
+13. Teclea: git status (Para ver el estado de git... Lee cuidadosamente lo que sale ¿Esta el archivo rojo?)
+
+--- commint (comitiar pasar el archivo en forma definitiva del local al remoto )
+14. Teclea: git commit -m "Estoy seguro de este commit" (lee cuidadosamente lo que sale)
+
+--- VIENE POR FIN EL "push"... AHORA QUE YA ESTA TODO PREPARADO
+15. Teclea: git push origin master (en lugar de master puede ser el nombre de una rama)... PUEDE SALIR UNA VENTANA EMERGENTE PARA VALIDAR USUARIO Y CONTRASEÑA ... Lee cuidadosamente lo que sale y vas a ver que dice que la rama master fue "trakeada"
+
+--- Revisa el repositorio remoto para ver si fue traqueado (Solo actualizalo, tocando el nombre del repositorio en la esquina superior izquierda)
+
+--- git clone - git pull
+--- git clone (COPIA TODO EL REPOSITORIO del remoto al local)
+16. Crea una carpeta en la PC dode vas a clonar el repositorio remoto (por ejemplo clone_pruebagit)
+17. Situate en la carpeta de la PC "clone_pruebita"
+18. Teclea: git clone https://github.com/bolakos/pruebagit (Esa es la dir electrónica del repo remoto)
+19. Revisa la carpeta clone:pruebagit (Debe estar el archivo "hola")
+
+--- git pull (COPIA SOLO LOS ARCHIVOS que han cambiado)
+20. Situate en la carpeta que deseas pullear el archivo, en este caso en local clone_git/pruebagit... o abre la terminal de git en esta carpeta
+21. Teclea: git pull origin master (lee cuidadosamente lo que sale)
+22. Revisa en el repositorio local... debe estar el archivo que creaste en remoto "pruebita"
+
